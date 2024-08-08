@@ -30,23 +30,35 @@ class Form extends React.Component{
             
         }
     }
+    
+    handlerSubmit = (e) =>{
+        const {title, message, select, gender} = this.state;
+        e.preventDefault();
+        console.log(title,message,select,gender);
+        
+    }
     render() {
-        const {title, message, select,gender} = this.state;
+        const {title, message, select, gender} = this.state;
         return (
             <div>Form Components
-                <input type="text" name="title" placeholder='Title' value={title} onChange={this.handleChange}/>
-                <br/>
-                <br/>
-                <textarea name='text' placeholder='Message' value={message} onChange={this.handleChange}/>
-                <br/>
-                <br/>
-                <select name="select" value={select} onChange={this.handleChange}>
-                    <option value="React">React</option>
-                    <option value="Java">Java</option>
-                </select>
-                <br/>
-                <br/>
-                <input type="checkbox" name="gender" placeholder='gender' checked={gender} onChange={this.handleChange}/>
+                <form onSubmit={this.handlerSubmit}>
+                    <input type="text" name="title" placeholder='Title' value={title} onChange={this.handleChange}/>
+                    <br/>
+                    <br/>
+                    <textarea name='text' placeholder='Message' value={message} onChange={this.handleChange}/>
+                    <br/>
+                    <br/>
+                    <select name="select" value={select} onChange={this.handleChange}>
+                        <option value="React">React</option>
+                        <option value="Java">Java</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <input type="checkbox" name="gender" placeholder='gender' checked={gender} onChange={this.handleChange}/>
+                    <br/>
+                    <br/>
+                    <input type="submit" name="Submit"/>
+                </form>
             </div>
         );
     }
