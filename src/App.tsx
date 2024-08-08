@@ -1,19 +1,12 @@
 
-import Emoji from './components/composition/Emoji';
-import Braket from './components/composition/Braket';
-import Text from './components/composition/Text';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
 
 function App() {
   return (
     <div>
-      <Emoji>
-        {({addEmoji}) =>  
-          <Braket>
-            {({addBraket}) => <Text addBraket={addBraket}/>}
-          </Braket>
-        }
-
-      </Emoji>
+      <ClickCounter/>
+      <HoverCounter/>
     </div>
   )
 }
