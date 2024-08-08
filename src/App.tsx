@@ -1,9 +1,9 @@
 
-import Calculator from './components/Calculator';
+import ChildEmoji from './components/inheritance/ChildEmoji';
 
 function App() {
   return (
-    <div><Calculator/></div>
+    <div><ChildEmoji/></div>
   )
 }
 
