@@ -1,9 +1,20 @@
 
-import ChildEmoji from './components/inheritance/ChildEmoji';
+import Emoji from './components/composition/Emoji';
+import Braket from './components/composition/Braket';
+import Text from './components/composition/Text';
 
 function App() {
   return (
-    <div><ChildEmoji/></div>
+    <div>
+      <Emoji>
+        {({addEmoji}) =>  
+          <Braket>
+            {({addBraket}) => <Text addBraket={addBraket}/>}
+          </Braket>
+        }
+
+      </Emoji>
+    </div>
   )
 }
 
