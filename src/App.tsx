@@ -1,8 +1,13 @@
-import ClockClass from './components/useEffect/ClockClass';
+import { useState } from 'react';
+import Clock from './components/useEffect/Clock';
 
 function App() {
+  const [show, setShow] = useState(false);
+  
     return (
-      <div><ClockClass/>
+      <div>
+          {show && <Clock/>}
+          <button onClick={() => setShow((preShow) => !preShow) }>Clock</button>
       </div>
     )
 }
