@@ -1,21 +1,9 @@
-import React from "react";
-
-export default class HoverCounter extends React.Component{
-    state ={
-    counter: 0
-    }
-
-    handelOnClick = ()=>{
-        this.setState(
-           (preState) => ({
-                counter:preState.counter +1,
-           })
-        );
-    }
-    render(){
-        const {counter} = this.state;
-        return (
-            <h1 onMouseOver={this.handelOnClick}>Click {counter} time</h1>
-        );
-    }
+export default function HoverCounter({counter,handelOnClick, theme, switchTheme}){
+    const style = theme ==='dark' ? {backgroundColor:'#000000', color:'#ffffff' } : null;
+    return (
+       <>
+        <h1 onMouseOver={handelOnClick} style={style}>Click {counter} time</h1>
+        <button type="button" onClick={switchTheme}>Change Theme</button>
+       </>
+    );
 } 
