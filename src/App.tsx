@@ -1,8 +1,8 @@
-import Todo from './components/useState/Todo';
+import ClockClass from './components/useEffect/ClockClass';
 
 function App() {
     return (
-      <div><Todo/>
+      <div><ClockClass/>
       </div>
     )
 }
