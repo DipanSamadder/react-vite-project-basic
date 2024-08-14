@@ -1,11 +1,11 @@
 
-import GetPost from './components/reducer/GetPost';
+import GetPostByReducer from './components/reducer/GetPostByReducer';
 
 
 function App() {
     return (
       <div>
-        <GetPost />
+        <GetPostByReducer />
       </div>
     )
 }
