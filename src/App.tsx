@@ -1,11 +1,13 @@
 
-import GetPostByReducer from './components/reducer/GetPostByReducer';
+import WindowSizeCalculate from './components/customHooks/WindowSize';
+import WindowSizeCalculateTwo from './components/customHooks/WindowSizeTwo';
 
 
 function App() {
     return (
       <div>
-        <GetPostByReducer />
+        <WindowSizeCalculate />
+        <WindowSizeCalculateTwo />
       </div>
     )
 }
